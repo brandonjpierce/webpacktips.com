@@ -1,5 +1,7 @@
 # webpacktips.com
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/brandonjpierce/webpacktips.com.svg)](https://greenkeeper.io/)
+
 Markdown powered site providing micro tips for webpack. Coming soon™.
 
 ### Local Installation and Usage
