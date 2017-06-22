@@ -1,6 +1,6 @@
 {
   "name": "webpacktips",
-  "alias": "webpacktips.com",
+  "alias": "webpacktips",
   "env": {
     "NODE_ENV": "production"
   }

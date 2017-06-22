@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
+    "build": "npm run build:pages && npm run build:manifest",
     "build:pages": "node scripts/pages.js",
     "build:manifest": "node scripts/manifest.js",
     "start": "micro",
@@ -14,6 +15,7 @@
     "front-matter": "^2.1.2",
     "html-minifier": "^3.5.2",
     "lodash": "^4.17.4",
+    "make-dir": "^1.0.0",
     "marked": "^0.3.6",
     "micro": "^7.3.3",
     "micro-compress": "^1.0.0",
@@ -25,11 +27,11 @@
     "walk": "^2.3.9"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-prettier": "^2.1.1",
+    "eslint": "^4.0.0",
+    "eslint-config-prettier": "^2.2.0",
     "eslint-config-xo": "^0.18.2",
-    "eslint-plugin-prettier": "^2.1.1",
+    "eslint-plugin-prettier": "^2.1.2",
     "pino-grigio": "^1.0.2",
-    "prettier": "^1.4.2"
+    "prettier": "^1.4.4"
   }
 }
