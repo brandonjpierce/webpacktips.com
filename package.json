@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "build": "node scripts/manifest.js",
+    "build:pages": "node scripts/pages.js",
+    "build:manifest": "node scripts/manifest.js",
     "start": "micro",
     "deploy": "now",
-    "dev": "yarn build && micro | pino-grigio"
+    "dev": "yarn build:manifest && yarn build:pages && micro | pino-grigio"
   },
   "dependencies": {
+    "del": "^3.0.0",
     "front-matter": "^2.1.2",
+    "html-minifier": "^3.5.2",
     "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "micro": "^7.3.3",
