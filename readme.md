@@ -1,6 +1,7 @@
-# webpacktips.com
+# Webpacktips
 
 Markdown powered site providing micro tips for webpack. Coming soon™.
+WIP site can be found at: https://webpacktips.now.sh
 
 ### Local Installation and Usage
 
@@ -8,4 +9,4 @@ Markdown powered site providing micro tips for webpack. Coming soon™.
 2) `npm install` or `yarn`
 3) `npm run dev` or `yarn dev`
 4) Site manifest is built with `scripts/manifest.js`
-5) Markdown files are rendered from `tips` directory
+5) Markdown is compiled with `scripts/pages.js`
