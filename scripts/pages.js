@@ -50,7 +50,6 @@ del([path.join(pagesDir)])
             path.join(pagesDir, lang, `${file}.html`),
             minify(compiled(props), {
               collapseBooleanAttributes: true,
-              collapseInlineTagWhitespace: true,
               collapseWhitespace: true,
               minifyURLs: true,
               removeComments: true,
