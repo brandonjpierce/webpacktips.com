@@ -17,7 +17,7 @@
     "build:manifest": "node scripts/manifest.js",
     "start": "micro",
     "deploy": "now && now alias",
-    "dev": "yarn build && micro | pino-grigio --color=always"
+    "dev": "yarn build && micro | pino-grigio"
   },
   "lint-staged": {
     "*.js": [
