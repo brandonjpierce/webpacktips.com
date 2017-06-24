@@ -32,13 +32,13 @@ del([path.join(pagesDir)])
       const html = marked(body, {
         gfm: true,
         tables: true,
-        breaks: true
+        breaks: true,
       });
 
       const props = assign({}, attributes, {
         lang,
         file,
-        html
+        html,
       });
 
       const compiled = template(await postContent, { imports: { forEach } });
@@ -60,7 +60,7 @@ del([path.join(pagesDir)])
               removeRedundantAttributes: true,
               removeScriptTypeAttributes: true,
               removeStyleLinkTypeAttributes: true,
-              useShortDoctype: true
+              useShortDoctype: true,
             }),
             'utf8'
           )

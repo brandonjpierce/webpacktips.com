@@ -3,7 +3,7 @@
     "node": true
   },
   "extends": [
-    "xo",
+    "xo-space",
     "prettier"
   ],
   "plugins": [
@@ -11,7 +11,20 @@
   ],
   "rules": {
     "prettier/prettier": ["error", {
-      "singleQuote": true
-    }]
+      "singleQuote": true,
+      "trailingComma": "es5"
+    }],
+    "capitalized-comments": 0,
+    "no-compare-neg-zero": 0,
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ]
   }
 }

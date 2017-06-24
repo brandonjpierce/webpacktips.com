@@ -33,7 +33,7 @@ del([path.join(manifestDir, '*.json')])
       manifest[lang].push({
         route: identifier,
         title: attributes.title,
-        date: attributes.date
+        date: attributes.date,
       });
 
       next();

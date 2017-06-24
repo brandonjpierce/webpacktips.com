@@ -2,13 +2,29 @@
   "name": "webpacktips",
   "version": "1.0.0",
   "main": "src/index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "author": {
+    "name": "Brandon Pierce",
+    "url": "https://brandonjpierce.com"
+  },
   "scripts": {
+    "precommit": "lint-staged",
     "build": "npm run build:pages && npm run build:manifest",
     "build:pages": "node scripts/pages.js",
     "build:manifest": "node scripts/manifest.js",
     "start": "micro",
-    "deploy": "now",
-    "dev": "yarn build:manifest && yarn build:pages && micro | pino-grigio"
+    "deploy": "now && now alias",
+    "dev": "yarn build && micro | pino-grigio --color=always"
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint",
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "del": "^3.0.0",
@@ -27,10 +43,12 @@
     "walk": "^2.3.9"
   },
   "devDependencies": {
-    "eslint": "^4.0.0",
+    "eslint": "^4.1.0",
     "eslint-config-prettier": "^2.2.0",
-    "eslint-config-xo": "^0.18.2",
+    "eslint-config-xo-space": "^0.16.0",
     "eslint-plugin-prettier": "^2.1.2",
+    "husky": "^0.14.1",
+    "lint-staged": "^4.0.0",
     "pino-grigio": "^1.0.2",
     "prettier": "^1.4.4"
   }
